@@ -93,7 +93,7 @@
                 <!-- <h4 class="site-sub-title">FOOD</h4> -->
                 <!-- <h3 style="color: black; font-family: 'Roboto medium'" >LLEVAMOS LA COMIDA A DOMICILIO A OTRO NIVEL</h3> -->
 
-                <p class="mb-4 content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor mi et mattis posuere. Nam pharetra orci non risus vehicula aliquet consectetur sit amet magna. Quisque consectetur pretium velit eget fermentum. Ut vehicula vestibulum aliquet. Maecenas sed ultrices odio. Aliquam erat volutpat. Donec aliquet, mauris ac scelerisque eleifend, massa elit semper nulla, ac volutpat augue velit id orci. Maecenas vestibulum sed magna pulvinar ultrices. In ultrices mi vel augue tincidunt, in dapibus sem commodo. Integer sollicitudin porta arcu vitae imperdiet. Quisque ornare mi at dui aliquet porttitor. </p>
+                <p class="mb-4 content-text">Desde Mind Your Fucking FOODS estamos enfocados en exclusiva a la cocina fantasma y nuestros cuatro primeros restaurantes. Te traemos una variedad de platos brutales, disruptivos y deliciosos.</p>
               </div>
               <div class="col-md-1"></div>
               <div class="col-md-6 site-animate content-image" data-animate-effect="fadeInRight">
@@ -263,20 +263,20 @@
                         <p class="site-sub-title text-center text-white">PIDE INFORMACIÓN PARA ABRIR TU RESTAURANTE EN FV!</p>
                 </div>
                 <div class="row">
-                      <div style="margin: auto;" class="col-md-7 site-animate img">
+                      <div style="margin: auto;z-index: 99;" class="col-md-7 site-animate img">
                           <div class="col-md-12 mb-5 site-animate">
-                              <form action="" method="post">
+                              <form action="correo.php" method="post">
                                 <div> 
-                                  <input type="text"  id="name" placeholder="Nombre y Apellidos">
+                                  <input name="name" type="text"  id="name" placeholder="Nombre y Apellidos">
                                 </div>
                                 <div >
-                                  <input type="email"  id="email" placeholder="Email">
+                                  <input name="email" type="email"  id="email" placeholder="Email">
                                 </div>
                                 <div >
-                                    <input type="text" id="telefono" placeholder="Telefono">
+                                    <input name="phone" type="text" id="telefono" placeholder="Telefono" required>
                                   </div>
                                 <div >
-                                  <textarea name="message" id="message" cols="30" rows="10"  placeholder="Mensaje"></textarea>
+                                  <textarea  name="message" id="message" cols="30" rows="10"  placeholder="Mensaje"></textarea>
                                 </div>
                                 <div style="line-height: 50px; width: 100%;">
                                   <input type="submit" class="btn btn-primaryy btn-lg btn-black" value="ENVIAR" style="width: 100%;">

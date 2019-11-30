@@ -1265,6 +1265,7 @@ form{
   border: black;
   margin:auto;
   background-color:none;
+    z-index: 99;
 }
 
 form label{
