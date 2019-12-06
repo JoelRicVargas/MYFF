@@ -52,6 +52,12 @@ p{
 .text-primary {
   color: #282E47 !important;
 }
+.site-custom-padding{
+  padding-bottom: 100px !important;
+}
+.enabled{
+    display: none;
+}
 /*==================MENU=========================*/
 /*===============================================*/
 .nav-contact{
@@ -77,12 +83,65 @@ p{
 
 @media screen and (max-width: 991px) {
   .site-navbar-light {
-    background: #000 !important;
+    top: 0;
+    position: relative;
+    padding: 10px;
+  }
+    .site-navbar-light .navbar-brand{
+        max-width: 120px;
+    }
+    #section-home{
+/*        height: 500px;*/
+    }
+    .carousel{
+        background: red;
+        max-height: 600px;
+    }
+    .carousel-indicators li{
+        margin-top: -100px !important;
+    }
+}
+
+@media screen and (max-width: 710px) {
+  .site-navbar-light {
     top: 0;
     position: relative;
   }
+    #section-home{
+/*        height: 500px;*/
+    }
+    .carousel{
+        background: red;
+        max-height: 400px;
+/*       
+        height: 100% !important;
+        width: 100% !important;
+*/
+    }
+    .carousel-indicators li{
+        display: none;
+    }
 }
-
+@media screen and (max-width: 610px) {
+  .site-navbar-light {
+    top: 0;
+    position: relative;
+  }
+    #section-home{
+/*        height: 500px;*/
+    }
+    .carousel{
+        background: red;
+        max-height: 300px;
+/*       
+        height: 100% !important;
+        width: 100% !important;
+*/
+    }
+    .carousel .row{
+        margin-top: -90% !important;
+    }
+}
 .site-navbar-light .navbar-nav > .nav-item > .nav-link {
   font-size: 13px;
   text-transform: uppercase;
@@ -248,18 +307,66 @@ p{
   -o-transition: .3s all ease-out;
   transition: .3s all ease-out;
 }
-
-.navbar-brand {
+.site-navbar-light.scrolled .navbar-brand {
   text-transform: uppercase;
-  letter-spacing: .1em;
-  font-size: 25px;
+    display: none;
+}
+.site-navbar-light.scrolled .enabled{
+    display: block;
 }
 /*==============HEADER======================*/
 /*==========================================*/
+#section-home .fas{
+    width: 100px;
+    height: 150px;
+    color: #FFF;
+    position: relative;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    bottom: inherit!important;
+}
+#section-home .carousel-indicators li{
+    width: 15px;
+    height: 15px;
+    margin-top: -130px;
+}
+#section-home .carousel-control-prev{
+    z-index: 8;
+}
+#section-home .carousel-control-next{
+    z-index: 8;
+}
+#section-home  .container-title{
+    z-index: 8;
+}
+#section-home  .container-title .btn{
+    z-index: 7;
+}
+
+.carousel-inner{
+    position: relative;
+}
+
 .overlayed-header{
     width: 100%;
     height: 100%;
-    background:rgba(40,46,71,.8);       
+}
+.overlayed-header::after{
+   content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:rgba(40,46,71,.6);
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+.overlayed-header .btn{
+    position: relative;
 }
 .content-logo{
     position: relative;
@@ -295,12 +402,9 @@ p{
   display: block;
   background: url('../images/Portada.jpg') no-repeat center center fixed;
   background-size: 100% 100%;
-  background-repeat: no-repeat;
-  z-index: 0;
-
 }
 .site-cover .scroll-header{
-    z-index: 4;
+    z-index: 15;
     width: 15px;
     height: 30px;
     border-radius: 10px;
@@ -319,19 +423,20 @@ p{
     height: 5px;
     background: #282E47;
     display: inline-block;
+    z-index: 7;
 }
 .site-cover .montain::after{
     content: '';
     display: block;
+    position: absolute;
     height: 100%;
     width: 100%;
     background: url(../svg/montana.svg) bottom no-repeat;
     background-size: cover;
-    position: absolute;
     bottom: -10px;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 6;
 }
 .site-cover .title{
     font-size: 41px;
@@ -375,8 +480,18 @@ p{
 
 @media screen and (max-width: 768px) {
   .site-cover .btn {
-    width: 60% !important;
+    margin: auto;
+    width: 100% ;
   }
+  .site-cover .btn-custom {
+        
+      margin: auto;
+      width: 25% ;
+      padding: 0 !important;
+  }
+    .content-custom{
+        margin-top: -75% !important;
+    }
 }
 
 
@@ -395,7 +510,7 @@ p{
 }
 
 .site-cover .site-vh-100 {
-  min-height: 700px !important;
+  min-height: 450px !important;
 }
 /*===============================================*/
 /*===============================================*/
@@ -436,6 +551,7 @@ p{
 /*===============================================*/
 .carta-site{
     background: #282E47;
+    padding: 15px;
 
 }
 .site-cover .title-dark .site-primary-title{
@@ -450,7 +566,8 @@ p{
     margin: 10px 0;
 }
 .carta .titulo-carta{
-    margin-top: -30px;
+    color: #B58F35;
+    font-weight: 900;
     margin-bottom: 20px;
 }
 .carta hr{
@@ -518,6 +635,23 @@ p{
     background-repeat: no-repeat;
     overflow: hidden;
 }
+.section-custom{
+    overflow: visible;
+}
+.site-cover .montain-up::after{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(../svg/montana-up.svg) bottom no-repeat;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: -12%;
+    z-index: 5;
+} 
 
 .site-cover .montain-top::after{
     position: absolute;
@@ -637,8 +771,8 @@ p{
 }
 
 .btn.btn-lg {
-  font-size: 16px !important;
-  padding: 13px 40px !important;
+  font-size: 16px;
+  padding: 13px 40px;
 }
 
 
@@ -684,7 +818,7 @@ p{
 
 
 .btn.btn-outline-white {
-  margin-top: 100px;
+  margin-top: 20px;
   border-radius: 30px;
   border: 1px solid #FFF;
   color: #fff;
@@ -811,7 +945,7 @@ textarea.form-control {
  
 }
 
-.site-footer .icon-twitter, .site-footer .icon-facebook,
+.site-footer .icon-twitter, .site-footer .icon-linkedin,
 .site-footer .icon-instagram{
     color: #B58F35;
     font-size: 18px;
