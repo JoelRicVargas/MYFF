@@ -94,11 +94,15 @@ p{
 /*        height: 500px;*/
     }
     .carousel{
-        background: red;
-        max-height: 600px;
+        max-height: 700px;
     }
     .carousel-indicators li{
         margin-top: -100px !important;
+    }
+    .carousel .btn {
+        font-size: 10px !important;
+        width: 25%;
+        padding: 50px !important;
     }
 }
 
@@ -111,7 +115,7 @@ p{
 /*        height: 500px;*/
     }
     .carousel{
-        background: red;
+        background: #FFF;
         max-height: 400px;
 /*       
         height: 100% !important;
@@ -133,6 +137,26 @@ p{
     .carousel{
         background: red;
         max-height: 300px;
+/*       
+        height: 100% !important;
+        width: 100% !important;
+*/
+    }
+    .carousel .row{
+        margin-top: -90% !important;
+    }
+}
+@media screen and (max-width: 400px) {
+  .site-navbar-light {
+    top: 0;
+    position: relative;
+  }
+    #section-home{
+/*        height: 500px;*/
+    }
+    .carousel{
+        background: red;
+        max-height: 250px;
 /*       
         height: 100% !important;
         width: 100% !important;
@@ -344,6 +368,9 @@ p{
     z-index: 7;
 }
 
+#section-home img{
+    height::; 100%;
+}
 .carousel-inner{
     position: relative;
 }
